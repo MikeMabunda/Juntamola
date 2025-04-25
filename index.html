@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JuntaMola</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f9f4;
+      color: #222;
+    }
+    header {
+      background-color: #00b894;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #55efc4;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+    }
+    .hero {
+      background-color: #ffeaa7;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .cta-button {
+      background-color: #00cec9;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: #dfe6e9;
+    }
+    .feature {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 20px;
+      max-width: 300px;
+    }
+    footer {
+      background-color: #00b894;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+    .form-section {
+      padding: 40px 20px;
+      background-color: #ffffff;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, select, button {
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #00cec9;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    JuntaMola
+  </header>  <nav>
+    <a href="#">Início</a>
+    <a href="#cadastro">Cadastro</a>
+    <a href="#login">Login</a>
+    <a href="#contato">Contato</a>
+  </nav>  <section class="hero">
+    <h1>Guarde, Empreste e Ganhe com a JuntaMola</h1>
+    <p>Plataforma jovem para guardar seu dinheiro e ganhar rendimentos de forma colaborativa.</p>
+    <button class="cta-button">Comece Agora</button>
+  </section>  <section class="features">
+    <div class="feature">
+      <h3>Armazene com Segurança</h3>
+      <p>Use e-Mola ou M-Pesa para guardar seu dinheiro com toda a segurança digital.</p>
+    </div>
+    <div class="feature">
+      <h3>Ganhe Empréstimos</h3>
+      <p>Ficou 3 meses com 2000MT? Solicite até 20% de empréstimo com apenas 5% de juros.</p>
+    </div>
+    <div class="feature">
+      <h3>Empreste e Lucre</h3>
+      <p>Ajude outros usuários e ganhe 3% de juros ao emprestar seu saldo guardado.</p>
+    </div>
+    <div class="feature">
+      <h3>Ganhos com Anúncios</h3>
+      <p>JuntaMola se mantém com anúncios, garantindo mais vantagens a você!</p>
+    </div>
+  </section>  <section class="form-section" id="cadastro">
+    <h2>Cadastro</h2>
+    <form action="cadastro.php" method="POST">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="tel" name="telefone" placeholder="Número de telefone" required>
+      <select name="operadora" required>
+        <option value="">Selecione a operadora</option>
+        <option value="e-mola">e-Mola</option>
+        <option value="m-pesa">M-Pesa</option>
+      </select>
+      <input type="password" name="senha" placeholder="Senha" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </section>  <section class="form-section" id="login">
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+      <input type="tel" name="telefone" placeholder="Número de telefone" required>
+      <input type="password" name="senha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </section>  <footer>
+    &copy; 2025 JuntaMola - Todos os direitos reservados.
+  </footer>
+</body>
+</html>
