@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,53 +107,46 @@
 <body>
   <header>
     JuntaMola
-  </header>  <nav>
+  </header>
+
+  <nav>
     <a href="#">Início</a>
     <a href="#cadastro">Cadastro</a>
     <a href="#login">Login</a>
-    <a href="#contato">Contato</a>
-  </nav>  <section class="hero">
-    <h1>Guarde, Empreste e Ganhe com a JuntaMola</h1>
-    <p>Plataforma jovem para guardar seu dinheiro e ganhar rendimentos de forma colaborativa.</p>
-    <button class="cta-button">Comece Agora</button>
-  </section>  <section class="features">
-    <div class="feature">
-      <h3>Armazene com Segurança</h3>
-      <p>Use e-Mola ou M-Pesa para guardar seu dinheiro com toda a segurança digital.</p>
-    </div>
-    <div class="feature">
-      <h3>Ganhe Empréstimos</h3>
-      <p>Ficou 3 meses com 2000MT? Solicite até 20% de empréstimo com apenas 5% de juros.</p>
-    </div>
-    <div class="feature">
-      <h3>Empreste e Lucre</h3>
-      <p>Ajude outros usuários e ganhe 3% de juros ao emprestar seu saldo guardado.</p>
-    </div>
-    <div class="feature">
-      <h3>Ganhos com Anúncios</h3>
-      <p>JuntaMola se mantém com anúncios, garantindo mais vantagens a você!</p>
-    </div>
-  </section>  <section class="form-section" id="cadastro">
-    <h2>Cadastro</h2>
-    <form action="cadastro.php" method="POST">
-      <input type="text" name="nome" placeholder="Nome completo" required>
+    <a href="#deposito">Depósito</a>
+    <a href="#emprestimo">Empréstimo</a>
+  </nav>
+
+  <!-- Seção de Depósito -->
+  <section class="form-section" id="deposito">
+    <h2>Depósito</h2>
+    <form action="depositar.php" method="POST">
       <input type="tel" name="telefone" placeholder="Número de telefone" required>
+      <input type="number" name="valor" placeholder="Valor do depósito" required>
       <select name="operadora" required>
         <option value="">Selecione a operadora</option>
         <option value="e-mola">e-Mola</option>
         <option value="m-pesa">M-Pesa</option>
       </select>
-      <input type="password" name="senha" placeholder="Senha" required>
-      <button type="submit">Cadastrar</button>
+      <button type="submit">Depositar</button>
     </form>
-  </section>  <section class="form-section" id="login">
-    <h2>Login</h2>
-    <form action="login.php" method="POST">
+  </section>
+
+  <!-- Seção de Empréstimo -->
+  <section class="form-section" id="emprestimo">
+    <h2>Solicitar ou Oferecer Empréstimo</h2>
+    <form action="emprestimo.php" method="POST">
       <input type="tel" name="telefone" placeholder="Número de telefone" required>
-      <input type="password" name="senha" placeholder="Senha" required>
-      <button type="submit">Entrar</button>
+      <input type="number" name="valor" placeholder="Valor do empréstimo" required>
+      <select name="acao" required>
+        <option value="solicitar">Solicitar Empréstimo</option>
+        <option value="emprestar">Oferecer Empréstimo</option>
+      </select>
+      <button type="submit">Confirmar</button>
     </form>
-  </section>  <footer>
+  </section>
+
+  <footer>
     &copy; 2025 JuntaMola - Todos os direitos reservados.
   </footer>
 </body>
